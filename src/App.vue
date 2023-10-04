@@ -1,23 +1,30 @@
 <script setup lang="ts">
+import { defineAsyncComponent, ref } from "vue";
 import AppTinhTien from "./components/AppTinhTien.vue";
 import HeaderApp from "./views/header-app/index.vue";
+
+const ModalCreate = defineAsyncComponent(
+  () => import("./views/modal-create/index.vue")
+);
+
+const refModalCreate = ref();
+
+const handleCreate = () => {
+  console.log("vao");
+  refModalCreate.value.showModal = true;
+};
 </script>
 
 <template>
-  <div class="h-100% w-100%">
+  <div>
+    <header-app class="border-l" :handle-create="handleCreate" />
+    <n-divider class="inline" />
     <app-tinh-tien>
-      <template #header>
-        <header-app class="h-50px" />
-        <n-divider />
+      <template #body>
+        <modal-create ref="refModalCreate"  />
       </template>
     </app-tinh-tien>
   </div>
 </template>
 
-<style scoped>
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-</style>
+<style scoped></style>

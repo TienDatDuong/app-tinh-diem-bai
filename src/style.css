@@ -2,13 +2,18 @@
 }
 
 body {
-  
 }
 
 #app {
+  height: 100vh;
 }
 
-*{
+.container-color-violet {
+  /* background: linear-gradient(90deg, #fff, #9662c6); */
+  background-color: #9662c6;
+}
+
+* {
   padding: 0;
   margin: 0;
   height: 100vh;
