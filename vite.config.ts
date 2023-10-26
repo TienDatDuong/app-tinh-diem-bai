@@ -11,4 +11,11 @@ export default defineConfig({
       configFile: "../my-uno.config.ts",
     }),
   ],
+  css:{
+    preprocessorOptions:{
+      scss: {
+        additionalData: `@use "./src/scss/global.scss" as *;`
+      }
+    }
+  }
 });

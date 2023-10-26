@@ -1,0 +1,18 @@
+.description-grid {
+    padding-bottom: 0.2rem;
+    margin-bottom: 0.2rem;
+    border-bottom: 1px solid #dfefff;
+    color: #1f2225;
+    font-weight: 600;
+  
+    :last-child span {
+      display: flex;
+      color: #1b1c57;
+    }
+  }
+
+  $bgColor: red;
+
+.hello{
+  background-color: $bgColor;
+}
